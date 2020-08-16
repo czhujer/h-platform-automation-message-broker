@@ -41,7 +41,7 @@ Vagrant.configure('2') do |config|
 
     config_monitoring.vm.provision "r10k-run",
                                     type: "shell",
-                                    :inline => "r10k puppetfile install --force --puppetfile /etc/puppet/Puppetfile",
+                                    :inline => "cd /etc/puppet && r10k puppetfile install --force --puppetfile /etc/puppet/Puppetfile",
                                     :privileged => true
 
     config_monitoring.vm.provision "puppet-msg",
