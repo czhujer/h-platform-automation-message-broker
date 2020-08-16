@@ -2,7 +2,7 @@
 
 yum clean all -q
 
-yum install which virt-what yum-utils epel-release deltarpm -y -q
+yum install which virt-what yum-utils -y -q
 
 #for vagrant/facter
 yum install bind-utils net-tools -y -q
@@ -18,6 +18,8 @@ yum -q -y install gcc gcc-c++ patch readline-devel zlib-devel libxml2-devel liby
 yum install make ruby-devel redhat-rpm-config -y -q
 
 dnf install --enablerepo=PowerTools augeas augeas-devel -y -q
+
+yum install -y -q epel-release
 
 #echo 'source /opt/rh/rh-ruby27/enable' >> /root/.bashrc
 
