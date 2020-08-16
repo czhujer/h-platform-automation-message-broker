@@ -55,7 +55,7 @@ Vagrant.configure('2') do |config|
 
     config_monitoring.vm.provision "puppet-run",
                                     type: "shell",
-                                    :inline => "uppet apply --color=false --detailed-exitcodes /etc/puppet/manifests; retval=$?; if [[ $retval -eq 2 ]]; then exit 0; else exit $retval; fi;",
+                                    :inline => "puppet apply --color=false --detailed-exitcodes /etc/puppet/manifests; retval=$?; if [[ $retval -eq 2 ]]; then exit 0; else exit $retval; fi;",
                                     :privileged => true
 
   end
