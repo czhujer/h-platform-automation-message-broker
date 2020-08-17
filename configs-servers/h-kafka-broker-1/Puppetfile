@@ -24,4 +24,12 @@ mod 'puppet-prometheus', '7.1.0'
 
 mod 'puppet-selinux', '3.0.0'
 
+mod 'puppetlabs-translate', '1.2.0'
+
+mod 'deric-zookeeper', '1.0.0'
+
+mod 'puppet-cron', '2.0.0'
+
+mod 'puppetlabs-yumrepo_core', '1.0.7'
+
 mod 'kafka', :local => true
